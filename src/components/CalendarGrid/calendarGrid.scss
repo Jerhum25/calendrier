@@ -1,0 +1,39 @@
+.calendarGridContainer {
+  display: grid;
+  grid-template-rows: fit-content(60%);
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding-top: 5px;
+  flex: 1;
+  .day,
+  .nameDay {
+    border: 1px solid grey;
+    // height: 100px;
+    min-height: 40px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .day:hover {
+    background-color: lightgoldenrodyellow;
+  }
+  .nameDay {
+    border: 1px solid grey;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: default;
+    user-select: none;
+  }
+}
+
+
+@media screen and (max-width:575px){
+  .calendarGridContainer{
+    .nameDay{
+      font-size: 16px;
+    }
+  }
+}
